@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="Index.html" class="logo">Homepage</a><br><br>
+        <nav>
+            <a href="../Team.html" class="logo">Back to team</a><br><br>
+        </nav>
+    </header>
+    <br>
+    <main>
+        <h1 style="text-align: center; color: orange; font-size: 30px;">Contact Tech Wave Team</h1>
+        <section class="contact-info">
+            <form class="contact-form" action="#" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required>
+                
+                <br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required>
+                
+                <br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="3" required></textarea>
+                 
+                <br><br>
+                <button type="submit">Send Message</button>
+                <script>
+                    
+                    document.querySelector('.contact-form').addEventListener('submit', function(event) {
+                        const name = document.getElementById('name').value.trim();
+                        const email = document.getElementById('email').value.trim();
+                        const message = document.getElementById('message').value.trim();
+                        if (!name || !email || !message) {
+                            alert("Please fill out all fields.");
+                            event.preventDefault();  // Prevents form submission if fields are empty
+                            
+                        }
+                        
+                        alert("Message sent successfully!");
+                        contactForm.reset();
+                    });
+
+                </script>
+            </form>
+        </section>
+    </main>
+    <br>
+    <footer>
+        <p style="font-family: 'Times New Roman', Times, serif; font-size: 18px; text-align: center; color: orange;">&copy; 2024 TechWave Solutions. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
